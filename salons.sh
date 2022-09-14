@@ -43,6 +43,9 @@ if [[ $1 ]]
       echo -e "\nWhat's your phone number?"
       read CUSTOMER_PHONE
 
+      #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      #You want to RETURN something from the query that either HAS a value or does NOT 
+      #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       CUSTOMER_NAME=$($PSQL "SELECT name from customers where phone = '$CUSTOMER_PHONE'")
 
       #if customer doesn't exist
